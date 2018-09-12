@@ -1,0 +1,31 @@
+
+<div>
+<div class="maker-right-section">
+    <button class="btn exide-secondary-button" (click)="sendToApproverDeviation()">Approve</button>
+    <button class="btn exide-primary-button" (click)="rejectFromDeviation()">Reject</button>
+   
+</div>
+<div class="section-box clearfix">
+<ag-grid-angular 
+    style="height:750px;" 
+    class="ag-theme-balham ag-grid"
+    [gridOptions]="gridOptions"
+    [enableSorting]="true"
+    [enableFilter]="true"
+    [rowData]="deviationApproveList" 
+    [columnDefs]="columnDefs"
+    paginationPageSize="5"
+    pagination="true"
+    [showToolPanel]="showToolPanel"
+    [defaultColDef]="defaultColDef"
+    (beforeFilterChanged)="onBeforeFilterChanged()"
+    (afterFilterChanged)="onAfterFilterChanged()"
+    (filterModified)="onFilterModified()">
+</ag-grid-angular>
+</div>
+</div>
+<footer>
+    <div>
+        <small><i class="far fa-copyright"></i>2018 Exide Life Insurance Company Limited. All rights reserved.</small>
+    </div>
+</footer>

@@ -1,0 +1,64 @@
+<h4 style="margin-left:30px;margin-top:60px">Destination List</h4>
+<div class=" row" style="margin-right:0px;">
+    <div class="col-md-6" style="float: left;padding-left: 3.5%;">
+        <button class="btn exide-secondary-button" (click)="createList(reason)">Add</button>
+        <button class="btn exide-secondary-button" [disabled]="isvalid" (click)="updateList($event,reason)">Edit</button>
+    </div>
+    <!-- <div class="col-md-6" style="float: right;margin-top: 8px;">
+        <div class="col-md-7"></div>
+        <label for="code" class="col-md-2" style="margin-top: 7px;">Page Size: </label>
+        <div class="col-md-3" style="padding-left: 0px;">
+            <select (change)="onPageSizeChanged()" id="page-size" class="form-control">
+                <option value="10" selected="">10</option>
+                <option value="25">25</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+            </select>
+        </div>
+    </div> -->
+    <div style="clear: both;"></div>
+</div>
+
+
+<div class="section-box">
+<ag-grid-angular 
+    style="height:400px;" 
+    class="ag-theme-balham ag-grid"
+    [gridOptions]="gridOptions"
+    [enableSorting]="true"
+    [enableFilter]="true"
+    [rowData]="destination" 
+    [columnDefs]="columnDefs"
+    pagination="true"
+    [showToolPanel]="showToolPanel"
+    [defaultColDef]="defaultColDef"
+    (beforeFilterChanged)="onBeforeFilterChanged()"
+    (afterFilterChanged)="onAfterFilterChanged()"
+    (filterModified)="onFilterModified()"
+    [rowSelection]="rowSelection"
+    [enableColResize]="true"
+    [rowGroupPanelShow]="rowGroupPanelShow"
+    [pivotPanelShow]="pivotPanelShow"
+    [enableRangeSelection]="true"
+    (rowSelected)="onRowSelected($event)"
+    (selectionChanged)="onSelectionChanged($event)"
+    [pagination]="true"
+    [paginationPageSize]="paginationPageSize"
+    [paginationNumberFormatter]="paginationNumberFormatter"
+    [gridOptions]="gridOptions"
+    [defaultColDef]="defaultColDef">
+</ag-grid-angular>
+<div class="col-md-6" style="float: left;margin-top: -24px;margin-left: -15px;" >
+    
+    <div class="col-md-2" style="padding-left: 0px;">
+    <select (change)="onPageSizeChanged()" id="page-size" class="pageSize form-control" >
+        <option value="10" selected="">10</option>
+        <option value="25">25</option>
+        <option value="50">50</option>
+        <option value="100">100</option>
+    </select>
+    </div>
+    <label for="code" style="margin-top: 7px;margin-left:-40px; font-weight:400;">Records Per Page</label>
+</div>
+</div>
+<footer-c></footer-c>

@@ -1,0 +1,20 @@
+export class ContestMasterList{
+    contestAutoId:number;
+    contestId:number;
+    crtDay:number;
+    crtMnt:number;
+    crtYr:number;
+    activeRecrd:number;
+    contestName:string;
+    startDate:number;
+    endDate:number;
+    agTypes:string;
+    ctstType:string;
+    confirmationEMailAttchFilePath:string;
+    confirmationEMailAttchBy:string;
+    confirmationEMailAttchTime:Date;
+    cmCounter:number;
+    incentive_YorN:string;
+    advancecounter:number;
+    cid:number;
+}

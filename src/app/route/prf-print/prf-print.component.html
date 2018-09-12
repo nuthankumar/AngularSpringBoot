@@ -1,0 +1,125 @@
+<h4 style="margin-left: 30px;margin-top: 60px;">PRF Print</h4>
+<div class="prf-dropdown">
+    <div>
+        <ul class="nav nav-tabs tab-section">
+            <li class="active"><a data-toggle="tab" href="#home">Cash</a></li>
+            <li><a data-toggle="tab" href="#menu2">Tickets</a></li>
+        </ul>
+
+        <button (click)="downloadPRF()" class="exide-primary-button" style="margin-bottom: 10px;margin-right: 30px;margin-top: 10px;float: right;">Download</button>
+        <div class="tab-content">
+            <div id="home" class="tab-pane fade in active">
+                <div class="section-box">
+                    <select [(ngModel)]="selectedDate" (change)="selectedPRF(selectedDate)" class="form-control" style="width: 20%;margin-bottom: 10px;margin-top: 10px;"
+                        required placeholder="Today">
+                        <option value="today" selected>Today</option>
+                        <option value="prfNo">PRF no</option>
+                        <option value="date">Date</option>
+                    </select>
+
+                    <div *ngIf='displayPRFNo'>
+                        <select name='prfNo' [(ngModel)]="selectedNo" class="form-control" style="width: 20%;" required>
+                            <option *ngFor="let list of prfDetail" value="{{list}}">{{list | json}}</option>
+                        </select>
+                        <button (click)="getPRFByNo()" class="exide-primary-button" style="margin-bottom:10px;    margin-top: 10px;">Filter</button>
+                    </div>
+
+
+                    <div *ngIf='displayDate'>
+                        <div class="input-field">
+                            <label for="startDate">Start Date</label>
+                            <input type="date" name="startDate" class="form-control contest-details" [(ngModel)]="startDate"><br>
+                        </div>
+                        <div class="input-field">
+                            <label for="endDate">End Date</label>
+                            <input type="date" name="endDate" class="form-control contest-details" [(ngModel)]="endDate"><br>
+                        </div>
+                        <button (click)="getPRFDate()" class="exide-primary-button" style="margin-bottom:10px;">Filter</button>
+                    </div>
+                    <ag-grid-angular style="height:400px;" class="ag-theme-balham ag-grid" [gridOptions]="gridOptions" [enableSorting]="true"
+                        [enableFilter]="true" [rowData]="lists" [columnDefs]="columnDefs" [showToolPanel]="showToolPanel" [defaultColDef]="defaultColDef" (beforeFilterChanged)="onBeforeFilterChanged()"
+                        (afterFilterChanged)="onAfterFilterChanged()" (filterModified)="onFilterModified()" [rowSelection]="rowSelection"
+                        [enableColResize]="true"
+                        [rowGroupPanelShow]="rowGroupPanelShow"
+                        [pivotPanelShow]="pivotPanelShow"
+                        [enableRangeSelection]="true"
+                        [pagination]="true"
+                        [paginationPageSize]="paginationPageSize"
+                        [paginationNumberFormatter]="paginationNumberFormatter"
+                        [gridOptions]="gridOptions"
+                        [defaultColDef]="defaultColDef">
+                    </ag-grid-angular>
+                    <div class="col-md-6" style="float: left;margin-top: -24px;margin-left: -15px;">
+                        <div class="col-md-2" style="padding-left: 0px;">
+                            <select (change)="onPageSizeChanged()" id="page-size" class="pageSize form-control">
+                                <option value="10" selected="">10</option>
+                                <option value="25">25</option>
+                                <option value="50">50</option>
+                                <option value="100">100</option>
+                            </select>
+                        </div>
+                        <label for="code" style="margin-top: 7px;margin-left:-40px; font-weight:400;">Records Per Page</label>
+                    </div>
+                </div>
+            </div>
+            <div id="menu2" class="tab-pane fade">
+                <div class="section-box">
+                    <select [(ngModel)]="selectedDate" class="form-control" (change)="selectedPRF(selectedDate)" style="width: 20%; margin-bottom: 10px;margin-top: 10px;"
+                        required>
+                        <option value="today" selected>Today</option>
+                        <option value="prfNo">PRF no</option>
+                        <option value="date">Date</option>
+                    </select>
+                    <div *ngIf='displayPRFNo'>
+                        <select name='prfNo' [(ngModel)]="selectedNo" class="form-control" style="width: 20%; margin-bottom: 10px;" required>
+                            <option *ngFor="let list of prfDetailTicket" value="{{list}}">{{list | json}}</option>
+                        </select>
+                        <button (click)="getPRFByNoTicket()" class="exide-primary-button" style="margin-bottom:10px;">Filter</button>
+                    </div>
+
+
+                    <div *ngIf='displayDate'>
+                        <div class="input-field">
+                            <label for="startDate">Start Date</label>
+                            <input type="date" name="startDate" class="form-control contest-details" [(ngModel)]="startDate"><br>
+                        </div>
+                        <div class="input-field">
+                            <label for="endDate">End Date</label>
+                            <input type="date" name="endDate" class="form-control contest-details" [(ngModel)]="endDate"><br>
+                        </div>
+                        <button (click)="getPRFDateTicket()" class="exide-primary-button" style="margin-bottom:10px;">Filter</button>
+                    </div>
+
+
+                    <ag-grid-angular style="height:400px;" class="ag-theme-balham ag-grid" [gridOptions]="gridOptions1" [enableSorting]="true"
+                        [enableFilter]="true" [rowData]="Ticketlists" [columnDefs]="columnDefs" [showToolPanel]="showToolPanel" [defaultColDef]="defaultColDef" (beforeFilterChanged)="onBeforeFilterChanged()"
+                        (afterFilterChanged)="onAfterFilterChanged()" (filterModified)="onFilterModified()"
+                        [rowSelection]="rowSelection"
+    [enableColResize]="true"
+    [rowGroupPanelShow]="rowGroupPanelShow"
+    [pivotPanelShow]="pivotPanelShow"
+    [enableRangeSelection]="true"
+    [pagination]="true"
+    [paginationPageSize]="paginationPageSize"
+    [paginationNumberFormatter]="paginationNumberFormatter"
+    [gridOptions]="gridOptions"
+    [defaultColDef]="defaultColDef">
+                    </ag-grid-angular>
+                    <div class="col-md-6" style="float: left;margin-top: -24px;margin-left: -15px;">
+                        <div class="col-md-2" style="padding-left: 0px;">
+                            <select (change)="onPageSizeChanged()" id="page-size" class="pageSize form-control">
+                                <option value="10" selected="">10</option>
+                                <option value="25">25</option>
+                                <option value="50">50</option>
+                                <option value="100">100</option>
+                            </select>
+                        </div>
+                        <label for="code" style="margin-top: 7px;margin-left:-40px; font-weight:400;">Records Per Page</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<footer-c></footer-c>

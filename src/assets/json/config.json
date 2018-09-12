@@ -1,0 +1,460 @@
+{
+    "Maker": [
+        {
+          "id":"1",
+          "label": "Master",
+          "levelName": "group",
+          "children": [
+            
+            {
+              "id":"1",
+              "label": "Contest Master",
+              "levelName": "person",
+              "link": "/contestmaster"
+            },
+            {
+              "id":"1",
+              "label": "Agent Greg List",
+              "levelName": "person",
+              "link": "/#"
+            },
+            {
+              "id":"1",
+              "label": "Vendor",
+              "levelName": "person",
+              "link": "/vendor"
+            }
+          ]
+        },
+        {
+          "id":"1",  
+          "label": "Contest Data",
+          "levelName": "d",
+          "children": [
+            {
+              "id":"1",
+              "label": "Exide Contest",
+              "levelName": "d",
+              "link": "/exideContest"
+            },
+            {
+             "id":"1",
+              "label": "Exide Report DataUpdate",
+              "levelName": "d",
+              "link": "/exideReportDataUpdate"
+            },
+            {
+             "id":"1",
+              "label": "Exide Rule Engine",
+              "levelName": "person",
+              "link": "/exideRuleEngine"
+            }
+          ]
+        },
+        {
+          "id":"1",
+          "label": "Advance",
+          "levelName": "feedback",
+            "children": [
+            {
+              "id":"1",
+              "label": "Advance Pay Maker",
+              "levelName": "person",
+              "link": "/advancePay"
+            }
+          ]
+        },
+        {
+          "id":"1",
+          "label": "PRF",
+          "levelName": "feedback",
+           "children": [
+            {
+              "id":"1",  
+              "label": "Maker Queue",
+              "levelName": "person",
+              "link": "/makerContestlist"
+            },
+            {
+              "id":"1",  
+              "label": "PRF List",
+              "levelName": "person",
+              "link": "/prfList"
+            },
+            {
+              "id":"1",  
+              "label": "PRF Print",
+              "levelName": "person",
+              "link": "/prfPrint"
+            }
+          ]
+        }
+    ],
+    "Checker": [
+        {
+          "id":"1",
+          "label": "Master",
+          "levelName": "group",
+          "children": [
+            {
+              "id":"1",
+              "label": "Agent Master List",
+              "levelName": "person",
+              "link": "/agentMasterList"
+            },
+            {
+              "id":"1",
+              "label": "Contest Master",
+              "levelName": "person",
+              "link": "/contestmaster"
+            },
+            {
+              "id":"1",
+              "label": "Destination",
+              "levelName": "person",
+              "link": "/destination"
+            },
+            {
+              "id":"1",
+              "label": "Reasons",
+              "levelName": "person",
+              "link": "/reasons"
+            },
+            {
+              "id":"1",
+              "label": "Agent Greg List",
+              "levelName": "person",
+              "link": "/#"
+            },
+            {
+              "id":"1",
+              "label": "Vendor",
+              "levelName": "person",
+              "link": "/vendor"
+            }
+          ]
+        },
+        {
+          "id":"1",  
+          "label": "Contest Data",
+          "levelName": "speaker_notes",
+          "children": [
+            {
+              "id":"1",
+              "label": "Exide Contest",
+              "levelName": "person",
+              "link": "/exideContest"
+            },
+            {
+             "id":"1",
+              "label": "Exide Report DataUpdate",
+              "levelName": "person",
+              "link": "/exideReportDataUpdate"
+            },
+            {
+             "id":"1",
+              "label": "Exide Rule Engine",
+              "levelName": "person",
+              "link": "/exideRuleEngine"
+            }
+          ]
+        },
+        {
+          "id":"1",
+          "label": "Advance",
+          "levelName": "feedback",
+            "children": [
+            {
+              "id":"1",
+              "label": "Advance Pay Checker",
+              "levelName": "person",
+              "link": "/advancePayChecker"
+            }
+          ]
+        },
+        {
+          "id":"1",
+          "label": "PRF",
+          "levelName": "feedback",
+           "children": [
+            {
+              "id":"1",  
+              "label": "Checker Queue",
+              "levelName": "person",
+              "link": "/checkerContestList"
+            },
+            {
+              "id":"1",  
+              "label": "PRF List",
+              "levelName": "person",
+              "link": "/prfList"
+            },
+            {
+              "id":"1",  
+              "label": "PRF Print",
+              "levelName": "person",
+              "link": "/prfPrint"
+            }
+          ]
+        }
+        
+    ],
+    "Approver1": [
+        {
+          "id":"1",
+          "label": "Deviation",
+          "levelName": "group",
+          "children": [
+            {
+              "id":"1",
+              "label": "Deviation Approve",
+              "levelName": "person",
+              "link": "/deviation"
+            }
+          ]
+        },
+         {
+          "id":"2",
+          "label": "PRF",
+          "levelName": "group",
+          "children": [
+            {
+              "id":"1",
+              "label": "Approver1",
+              "levelName": "person",
+              "link": "/approveOne"
+            }
+          ]
+        }
+        
+    ],
+    "Approver2": [
+         {
+          "id":"1",
+          "label": "PRF",
+          "levelName": "group",
+          "children": [
+            {
+              "id":"1",
+              "label": "Approver2",
+              "levelName": "person",
+              "link": "/approveTwo"
+            }
+          ]
+        }
+        
+    ],
+    "Administrator": [
+         {
+          "id":"1",
+          "label": "Master",
+          "levelName": "group",
+          "children": [
+            
+            {
+              "id":"1",
+              "label": "Contest Master",
+              "levelName": "person",
+              "link": "/contestmaster"
+            },
+            {
+              "id":"1",
+              "label": "Destination",
+              "levelName": "person",
+              "link": "/destination"
+            },
+            {
+              "id":"1",
+              "label": "Reasons",
+              "levelName": "person",
+              "link": "/reasons"
+            },
+            {
+              "id":"1",
+              "label": "Agent Greg List",
+              "levelName": "person",
+              "link": "/gregList"
+            },
+            {
+              "id":"1",
+              "label": "Vendor",
+              "levelName": "person",
+              "link": "/vendor"
+            }
+          ]
+        },
+        {
+          "id":"1",  
+          "label": "Contest Data",
+          "levelName": "speaker_notes",
+          "children": [
+            {
+              "id":"1",
+              "label": "Exide Contest",
+              "levelName": "person",
+              "link": "/exideContest"
+            },
+            {
+             "id":"1",
+              "label": "Exide Report DataUpdate",
+              "levelName": "person",
+              "link": "/exideReportDataUpdate"
+            },
+            {
+             "id":"1",
+              "label": "Exide Rule Engine",
+              "levelName": "person",
+              "link": "/exideRuleEngine"
+            }
+          ]
+        },{
+          "id":"5",  
+          "label": "User Management",
+          "levelName": "jdks",
+          "children": [
+            {
+              "id":"3",
+              "label": "User List",
+              "levelName": "person",
+              "link": "/listUser"
+            },
+            {
+             "id":"1",
+              "label": "Add User",
+              "levelName": "person",
+              "link": "/addUser"
+            },
+            {
+             "id":"1",
+              "label": "Edit User",
+              "levelName": "person",
+              "link": "/editUser"
+            }
+          ]
+        },
+        {
+          "id":"1",
+          "label": "Deviation",
+          "levelName": "feedback",
+            "children": [
+            {
+              "id":"1",
+              "label": "Deviation Approve",
+              "levelName": "person",
+              "link": "/deviation"
+            }
+            
+          ]
+        },
+        {
+          "id":"1",
+          "label": "Advance",
+          "levelName": "feedback",
+            "children": [
+            {
+              "id":"1",
+              "label": "Advance Pay Maker",
+              "levelName": "person",
+              "link": "/advancePay"
+            },
+            {
+              "id":"1",
+              "label": "Advance Pay Checker",
+              "levelName": "person",
+              "link": "/advancePayChecker"
+            }
+          ]
+        },
+        
+        {
+          "id":"1",
+          "label": "PRF",
+          "levelName": "feedback",
+           "children": [
+             {
+              "id":"1",  
+              "label": "Upload/Download Ticket",
+              "levelName": "person",
+              "link": "/uploadDownload"
+            },
+            {
+              "id":"1",  
+              "label": "Maker Queue",
+              "levelName": "person",
+              "link": "/makerContestlist"
+            },
+            {
+              "id":"1",  
+              "label": "Checker Queue",
+              "levelName": "person",
+              "link": "/checkerContestList"
+            },
+            {
+              "id":"1",  
+              "label": "PRF List",
+              "levelName": "person",
+              "link": "/prfList"
+            },
+            {
+              "id":"1",  
+              "label": "Approver 1",
+              "levelName": "approveOne",
+              "link": "/approveOne"
+            },
+            {
+              "id":"1",  
+              "label": "Approver 2",
+              "levelName": "person",
+              "link": "/approveTwo"
+            },
+            {
+              "id":"1",  
+              "label": "Approver 3",
+              "levelName": "person",
+              "link": "/approveThree"
+            },
+            {
+              "id":"1",  
+              "label": "PRF Print",
+              "levelName": "person",
+              "link": "/prfPrint"
+            },
+            {
+              "id":"1",  
+              "label": "UTR",
+              "levelName": "person",
+              "link": "/utr"
+            }
+            ,
+            {
+              "id":"1",  
+              "label": "Vendor PRF",
+              "levelName": "person",
+              "link": "/vendorPRF"
+            }
+            
+          ]
+        },
+        {
+          "id":"1",
+          "label": "Callidus",
+          "levelName": "feedback",
+           "children": [
+            {
+              "id":"1",  
+              "label": "Callidus Run",
+              "levelName": "person",
+              "link": "/callidusRun"
+            },
+            {
+              "id":"1",  
+              "label": "Get View Data",
+              "levelName": "person",
+              "link": "/getViewData"
+            }
+            
+          ]
+        }
+        
+    ]
+}

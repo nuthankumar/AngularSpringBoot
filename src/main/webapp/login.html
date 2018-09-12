@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+<style>
+.login-background{
+    background-image: url('/src/assets/images/bg.jpg');
+    height: 100vh;
+    width: 100%;
+    }
+    .exidelife-login-logo {
+        padding: 0;
+        margin: 0 auto 30px auto;
+        border: 0;
+        outline: none;
+        text-align: center;
+    }
+    #login-box {
+        background-color: #fff;
+        width: 450px;
+        height: 490px;
+        padding: 40px;
+        border-radius: 2px;
+        display: inline-block;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+    .loginForm {
+        padding: 0;
+        margin: 0;
+    }
+    .loginForm .form-group {
+        margin-bottom: 20px;
+    }
+    .loginForm .form-group label {
+        width: 100%;
+        font-size: 13px;
+        line-height: 18px;
+        text-align: left;
+        color: #555;
+        padding: 0;
+        margin: 0 0 5px 0;
+        display: inline-block;
+    }
+    .loginForm .form-group .form-field {
+        width: 100%;
+        text-align: left;
+    }
+    .loginForm .form-group .form-field .form-control {
+        display: block;
+        width: 100%;
+        padding: 10px 8px;
+        font-size: 13px;
+        line-height: 18px;
+        color: #888;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 0;
+    }
+    .clearfix {
+        float: none;
+        clear: both;
+    }
+    .login_footer {
+        position: absolute;
+        bottom: -40px;
+        left: 0;
+        right: 0;
+        text-align: center;
+        font-size: 11px;
+        color: #999;
+        margin: 0 0 10px 0;
+        padding: 0;
+    }
+    .login_btn {
+        font-size: 14px;
+        line-height: 20px;
+        text-align: center;
+        padding: 12px 25px;
+        margin: 0px;
+        float: right;
+        color: #fff;
+        background-color: #85af4b;
+        border: none;
+        outline: none;
+        width: 100%;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        transition-delay: 0.2s;
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+    }
+    .login_btn:hover {
+        background-color: #6f933e;
+    }
+    .reset_btn {
+        font-size: 12px;
+        line-height: 16px;
+        color: #3791e2;
+        border: none;
+        outline: none;
+        background-color: #fff;
+        margin: 0 0 15px 0;
+        padding: 0;
+    }
+    .maker-right-section{
+        margin-right: 30px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    }
+    .login-section{
+        float: right;
+        margin: 20px;
+    }
+    .login-btn{
+        background-color: #3791e2!important;
+        color: #fff;
+    }
+    .prf-dropdown .multiselect-dropdown {
+        margin: 10px 0px!important;
+    }
+    label{
+    	font-family:sans-serif;
+    }
+    h3{
+    font-family:sans-serif;
+    }
+</style>
+    </head>
+    <body>
+        <div class="login-background">
+        <section id="login-box">
+                <div class="exidelife-login-logo">
+                        <img src="assets/images/exidelife-logo.jpg" alt="exide-life-logo" class="header-logo-image">
+                      </div>
+                      <h3>SFCRM Login</h3>
+
+        			<form ngNoForm action="login" method="post" class="loginForm">
+        	        <div class="form-group">
+        	        <p id='errorMsg'></p>
+        			    <label>Username</label>
+        			    <div class="form-field">
+        	   	        	<input type="text" placeholder="Enter Username" name="username" id="username" class="form-control">
+        	        	</div>
+        	        	<div class="clearfix"></div>
+        	        </div>
+
+        	        <div class="form-group">
+            	    	<label>Password</label>
+        	    	    <div class="form-field">
+            	  	    	<input type="password" placeholder="Enter Password" name="password" id="password" class="form-control">
+        	           	</div>
+        	           	<div class="clearfix"></div>
+        	        </div>
+        	        <div class="form-group">
+        	            <button type="reset" class="reset_btn">
+        						<i class="fas fa-redo"></i>
+        	            Reset</button>
+        	    	    <button type="submit" class="login_btn">Login</button>
+        	        </div>
+        	    	<!--<input type="hidden" name="_csrf" value="{{csrfToken}}"/>-->
+        			</form>
+        			<small class="login_footer">© 2018 Exide Life Insurance Company Limited. All rights reserved.</small>
+        </section>
+        </div>
+        <script type="text/javascript" src="styles.2ea86aa35cae38d7889d.js"></script>
+        <script>
+        
+        </script>
+    </body>
+</html>

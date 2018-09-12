@@ -1,0 +1,38 @@
+<div class="container" style="margin-top:4%;">
+    <div class="col-md-12">
+        <h3 class="m-t-0 m-b-30 header-title">Add Destination</h3><br>
+        <div class="deviation-box">
+            <form (ngSubmit)="form()" class="form-horizontal" role="form" >
+                <div class="form-group row">
+                    <label for="destID" class="col-md-3">Dest ID* :</label>
+                    <div class="col-md-9">
+                        <input type="text" name="destID" class="form-control" [(ngModel)]="destination.destID" 
+                        [ngModelOptions]="{standalone: true}">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="destName" class="col-md-3">Dest Name* :</label>
+                    <div class="col-md-9">
+                        <input type="text" name="destName" class="form-control" [(ngModel)]="destination.destName"
+                        [ngModelOptions]="{standalone: true}">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="destDescription" class="col-md-3">Dest Description :</label>
+                    <div class="col-md-9">
+                        <textarea class="form-control" rows="5" [(ngModel)]="destination.destDescrp" [ngModelOptions]="{standalone: true}"></textarea>
+                    </div>
+                </div>
+                <div class="form-group row" style="margin-bottom: 0px;">
+                    <div class="col-md-12">
+                        <div class="pull-right">
+                            <input type="submit" value="Save" class="btn btn-success">
+                            <a routerLink="/destination"><input type="button" value="Cancel" class="btn btn-default"></a>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<footer-c></footer-c>

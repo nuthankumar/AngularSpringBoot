@@ -1,0 +1,85 @@
+<h4 style="margin-left: 30px;margin-top: 60px;">PRF Details</h4>
+<div class="prf-dropdown">
+    <div style="margin: 10px 30px 0px 30px;">
+        <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#home">Cash</a></li>
+            <li><a data-toggle="tab" href="#menu2">Tickets</a></li>
+        </ul>
+        <div class="tab-content">
+            <div id="home" class="tab-pane fade in active">
+                <div class="">
+                    <ng-multiselect-dropdown [placeholder]="'AG Class'" [data]="agentType" [(ngModel)]="selectedItemss" [settings]="dropdownSettings"
+                        (onSelect)="onItemSelect($event)" (onDeSelect)="onItemSelect($event)">
+                    </ng-multiselect-dropdown>
+                    <div class="row">
+                        <div class='col-sm-3'>
+                            <button (click)="generatePrf()" class="exide-primary-button" style="margin-bottom:10px;">Generate PRF</button>
+                        </div>
+                        <div class='col-sm-4'>
+                            <input type='number' [(ngModel)]="fnPaySt" />
+                            <input type='number' [(ngModel)]="fnPayEn" />
+                        </div>
+                        <div class="col-sm-2">
+                            <select (change)="onItemSelect($event)" [(ngModel)]="selectedValueReason" class="form-control" [ngModelOptions]="{standalone: true}">
+                                <option value="positive" >Only positive value</option>
+                                <option value="negative">Only negative value</option>
+                                <option value="all">All</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-3">
+                            <button (click)="filterFinalPayable()" class="exide-primary-button" style="margin-bottom:10px;">Filter Range</button>
+                        </div>
+                    </div>
+                    
+                    <ag-grid-angular style="height:400px;" class="ag-theme-balham ag-grid" [enableSorting]="true" [enableFilter]="true" [rowData]="lists"
+                        [columnDefs]="columnDefs" [showToolPanel]="showToolPanel" (beforeFilterChanged)="onBeforeFilterChanged()"
+                        (afterFilterChanged)="onAfterFilterChanged()" (filterModified)="onFilterModified()" (modelUpdated)="onModelUpdated($event)"
+                        (rowSelected)="onRowSelected($event)" [rowSelection]="rowSelection" [enableColResize]="true" [rowGroupPanelShow]="rowGroupPanelShow"
+                        [pivotPanelShow]="pivotPanelShow" [enableRangeSelection]="true" [pagination]="true" [paginationPageSize]="paginationPageSize"
+                        [paginationNumberFormatter]="paginationNumberFormatter" [gridOptions]="gridOptions" [defaultColDef]="defaultColDef">
+                    </ag-grid-angular>
+                    <div class="col-md-6" style="float: left;margin-top: -24px;margin-left: -15px;">
+                        <div class="col-md-2" style="padding-left: 0px;">
+                            <select (change)="onPageSizeChanged()" id="page-size" class="pageSize form-control">
+                                <option value="10" selected="">10</option>
+                                <option value="25">25</option>
+                                <option value="50">50</option>
+                                <option value="100">100</option>
+                            </select>
+                        </div>
+                        <label for="code" style="margin-top: 7px;margin-left:-40px; font-weight:400;">Records Per Page</label>
+                    </div>
+                </div>
+            </div>
+            <div id="menu2" class="tab-pane fade">
+                <div class="">
+                    <ng-multiselect-dropdown [placeholder]="'AG Class'" [data]="agentType" [(ngModel)]="selectedItemssTicket" [settings]="dropdownSettings"
+                        (onSelect)="onItemSelect($event)" (onDeSelect)="onItemSelect($event)">
+                    </ng-multiselect-dropdown>
+                    <button (click)="generatePrfTicket()" class="exide-primary-button" style="margin-bottom:10px;">Generate PRF</button>
+
+                    <ag-grid-angular style="height:400px;" class="ag-theme-balham ag-grid" [gridOptions]="gridOptions1" [enableSorting]="true"
+                        [enableFilter]="true" [rowData]="Ticketlists" [columnDefs]="columnDefs" [showToolPanel]="showToolPanel"
+                        [defaultColDef]="defaultColDef" (beforeFilterChanged)="onBeforeFilterChanged()" (afterFilterChanged)="onAfterFilterChanged()"
+                        (filterModified)="onFilterModified()" [rowSelection]="rowSelection" [enableColResize]="true" [rowGroupPanelShow]="rowGroupPanelShow"
+                        [pivotPanelShow]="pivotPanelShow" [enableRangeSelection]="true" [pagination]="true" [paginationPageSize]="paginationPageSize"
+                        [paginationNumberFormatter]="paginationNumberFormatter" [gridOptions]="gridOptions" [defaultColDef]="defaultColDef">
+                    </ag-grid-angular>
+                    <div class="col-md-6" style="float: left;margin-top: -24px;margin-left: -15px;">
+                        <div class="col-md-2" style="padding-left: 0px;">
+                            <select (change)="onPageSizeChanged()" id="page-size" class="pageSize form-control">
+                                <option value="10" selected="">10</option>
+                                <option value="25">25</option>
+                                <option value="50">50</option>
+                                <option value="100">100</option>
+                            </select>
+                        </div>
+                        <label for="code" style="margin-top: 7px;margin-left:-40px; font-weight:400;">Records Per Page</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<footer-c></footer-c>

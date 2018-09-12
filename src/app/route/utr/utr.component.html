@@ -1,0 +1,57 @@
+<h4 style="margin-left: 30px;margin-top: 60px;">UTR</h4>
+<div class="prf-dropdown">
+    <div>
+        <div class="row" style="margin-left: 0px;">
+            <div class="col-md-8">
+                <div class="col-md-5">
+                    <select name='prfNo' [(ngModel)]="selectedNo" class="form-control"  required>
+                        <option *ngFor="let list of prfDetail" value="{{list}}">{{list | json}}</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <button (click)="getPRFByNo()" class="exide-primary-button">Submit</button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <button (click)="Update()" class="exide-primary-button" style="margin-bottom: 10px;margin-right: 30px;float: right;">Update</button>
+            </div>
+            <div style="clear: both;"></div>
+        </div>
+
+        
+        <div class="tab-content">
+            <div id="home" class="tab-pane fade in active">
+                <div class="section-box">
+                    <ag-grid-angular style="height:400px;" class="ag-theme-balham ag-grid" [gridOptions]="gridOptions" [enableSorting]="true"
+                        [enableFilter]="true" [rowData]="lists" [columnDefs]="columnDefs" [showToolPanel]="showToolPanel" [defaultColDef]="defaultColDef" (beforeFilterChanged)="onBeforeFilterChanged()"
+                        (afterFilterChanged)="onAfterFilterChanged()" (filterModified)="onFilterModified()" [rowSelection]="rowSelection"
+                        [enableColResize]="true"
+                        [rowGroupPanelShow]="rowGroupPanelShow"
+                        [pivotPanelShow]="pivotPanelShow"
+                        [enableRangeSelection]="true"
+                        [pagination]="true"
+                        [paginationPageSize]="paginationPageSize"
+                        [paginationNumberFormatter]="paginationNumberFormatter"
+                        [gridOptions]="gridOptions"
+                        [defaultColDef]="defaultColDef">
+                    </ag-grid-angular>
+                    <div class="col-md-6" style="float: left;margin-top: -24px;margin-left: -15px;">
+                        <div class="col-md-2" style="padding-left: 0px;">
+                            <select (change)="onPageSizeChanged()" id="page-size" class="pageSize form-control">
+                                <option value="10" selected="">10</option>
+                                <option value="25">25</option>
+                                <option value="50">50</option>
+                                <option value="100">100</option>
+                            </select>
+                        </div>
+                        <label for="code" style="margin-top: 7px;margin-left:-40px; font-weight:400;">Records Per Page</label>
+                    </div>
+                </div>
+                <input id="my-file-selector" type="file" (change)="uploadUTR($event)" name="uploadExcel">
+                <button class="" (click)="downloadExcel()">Download Excel</button>
+            </div>
+        </div>
+    </div>
+
+</div>
+<footer-c></footer-c>

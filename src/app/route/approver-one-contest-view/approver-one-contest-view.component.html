@@ -1,0 +1,70 @@
+<h4 style="margin-left:30px;margin-top:60px">Approver 1 Details</h4>
+<div>
+ <div>
+  <ul class="nav nav-tabs tab-section">
+    <li class="active"><a data-toggle="tab" href="#home">Cash</a></li>
+    <li><a data-toggle="tab" href="#menu2">Tickets</a></li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="home" class="tab-pane fade in active">
+        <div class="section-box">
+           <div class="approve-right-section">
+<button class="btn exide-secondary-button" (click)="sendToApproverTwo()">Approve</button>
+
+</div>
+<div class="approver-button-section">
+                 
+                    <div class="maker-reject-button">
+                        <button type="button" class="makerButton exide-primary-button" (click)="rejectBtn()">Reject</button>
+                    </div>
+                </div>
+<ag-grid-angular 
+    style="height: 400px;" 
+    class="ag-theme-balham  ag-grid"
+    [gridOptions]="gridOptions"
+    [enableSorting]="true"
+    [enableFilter]="true"
+    [rowData]="lists" 
+    [columnDefs]="columnDefs"
+    paginationPageSize="5"
+    pagination="true"
+    rowSelection="multiple" 
+    
+    >
+</ag-grid-angular>
+</div>
+      </div>
+      <div id="menu2" class="tab-pane fade">
+        <div class="section-box">
+           <div class="approve-right-section">
+<button class="btn exide-secondary-button" (click)="sendToApproverTwoTicket()">Approve</button>
+
+</div>
+<div class="approver-button-section">
+                  
+                    <div class="maker-reject-button">
+                        <button type="button" class="makerButton exide-primary-button" (click)="rejectBtnTicket()">Reject</button>
+                    </div>
+                </div>
+<ag-grid-angular 
+   style="height: 400px;" 
+    class="ag-theme-balham  ag-grid"
+    [gridOptions]="gridOptions1"
+    [enableSorting]="true"
+    [enableFilter]="true"
+    [rowData]="Ticketlists" 
+    [columnDefs]="columnDefs"
+    paginationPageSize="5"
+    pagination="true"
+    rowSelection="multiple"
+    >
+</ag-grid-angular>
+</div>
+      </div>
+  </div>
+</div>
+
+</div>
+<footer-c></footer-c>
+

@@ -1,0 +1,50 @@
+<h4 style="margin-left:30px;margin-top:60px">Advance Pay Maker Details</h4>
+<div style="margin: 15px 0px 10px 30px;">
+<button (click)="advancePayApprove()" class="exide-primary-button">Approve</button>
+<a routerLink="/addAdvancePay"><button class="exide-primary-button">Add New Advance Pay</button></a>
+</div>
+
+    <div id="home" class="tab-pane fade in active">
+        <div class="section-box">
+<ag-grid-angular 
+    style="height:570px;" 
+    class="ag-theme-balham ag-grid"
+    [gridOptions]="gridOptions"
+    [enableSorting]="true"
+    [enableFilter]="true"
+    [rowData]="advancePayListData" 
+    [columnDefs]="columnDefs"
+    paginationPageSize="5"
+    pagination="true"
+    [showToolPanel]="showToolPanel"
+    [defaultColDef]="defaultColDef"
+    (beforeFilterChanged)="onBeforeFilterChanged()"
+    (afterFilterChanged)="onAfterFilterChanged()"
+    (filterModified)="onFilterModified()"
+    [rowSelection]="rowSelection"
+    [enableColResize]="true"
+    [rowGroupPanelShow]="rowGroupPanelShow"
+    [pivotPanelShow]="pivotPanelShow"
+    [enableRangeSelection]="true"
+    [pagination]="true"
+    [paginationPageSize]="paginationPageSize"
+    [paginationNumberFormatter]="paginationNumberFormatter"
+    [gridOptions]="gridOptions"
+    [defaultColDef]="defaultColDef">
+</ag-grid-angular>
+<div class="col-md-6" style="float: left;margin-top: -24px;margin-left: -15px;" >
+    
+    <div class="col-md-2" style="padding-left: 0px;">
+    <select (change)="onPageSizeChanged()" id="page-size" class="pageSize form-control" >
+        <option value="10" selected="">10</option>
+        <option value="25">25</option>
+        <option value="50">50</option>
+        <option value="100">100</option>
+    </select>
+    </div>
+    <label for="code" style="margin-top: 7px;margin-left:-40px; font-weight:400;">Records Per Page</label>
+</div>
+</div>
+      </div>
+<footer-c></footer-c>
+

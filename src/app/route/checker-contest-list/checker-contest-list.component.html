@@ -1,0 +1,99 @@
+<h4 style="margin-left:30px;margin-top:60px">Checker Details</h4>
+<div>
+  <div>
+    <ul class="nav nav-tabs tab-section">
+      <li class="active"><a data-toggle="tab" href="#home">Cash</a></li>
+      <li><a data-toggle="tab" href="#menu2">Tickets</a></li>
+    </ul>
+
+    <div class="tab-content">
+      <div id="home" class="tab-pane fade in active">
+        <div class="checker-button-section" style="width: 30%;">
+          <span>Contest:</span>
+      <div class="button-select-option" style="width:57%;">
+        <select [(ngModel)]="selectedValue" class="form-control">
+          <option value="undefined"  disabled selected>Select</option>
+          <option *ngFor="let list of lists" value={{list.contestId}}>
+            {{list.contestId}}
+          </option>
+        </select>
+      </div>
+      <div class="maker-reject-button">
+        <button type="button" class="makerButton exide-primary-button" (click)="rejectBtn()">Reject</button>
+      </div>
+    </div>
+        <div class="section-box">
+          <ag-grid-angular style="height: 400px;" class="ag-theme-balham ag-grid" [enableSorting]="true" [enableFilter]="true" [gridOptions]="gridOptions"
+            [rowData]="lists" [columnDefs]="columnDefs" (rowClicked)='onRowClicked($event)' [rowSelection]="rowSelection"
+            [enableColResize]="true"
+            [rowGroupPanelShow]="rowGroupPanelShow"
+            [pivotPanelShow]="pivotPanelShow"
+            [enableRangeSelection]="true"
+            [pagination]="true"
+            [paginationPageSize]="paginationPageSize"
+            [paginationNumberFormatter]="paginationNumberFormatter"
+            [gridOptions]="gridOptions"
+            [defaultColDef]="defaultColDef">
+          </ag-grid-angular>
+          <div class="col-md-6" style="float: left;margin-top: -24px;margin-left: -15px;">
+            <div class="col-md-2" style="padding-left: 0px;">
+                <select (change)="onPageSizeChanged()" id="page-size" class="pageSize form-control">
+                    <option value="10" selected="">10</option>
+                    <option value="25">25</option>
+                    <option value="50">50</option>
+                    <option value="100">100</option>
+                </select>
+            </div>
+            <label for="code" style="margin-top: 7px;margin-left:-40px; font-weight:400;">Records Per Page</label>
+        </div>
+         <div class="closeBut">
+                        <a routerLink="/"><button class="exide-primary-button">Close</button></a>
+                    </div>
+        </div>
+      </div>
+      <div id="menu2" class="tab-pane fade">
+        <div class="checker-button-section">
+          <span>Contest:</span>
+          <div class="button-select-option"> <select [(ngModel)]="selectedValue">
+              <option value="undefined"  disabled selected>Select</option>
+              <option *ngFor="let checkerlist of checkerTicket" value={{checkerlist.contestId}}>
+                {{checkerlist.contestId}}
+              </option>
+            </select></div>
+          <div class="maker-reject-button">
+            <button type="button" class="makerButton exide-primary-button" (click)="rejectBtnTicket()">Reject</button>
+          </div>
+        </div>
+        <div class="section-box">
+          <ag-grid-angular style="height: 400px;" class="ag-theme-balham ag-grid" [enableSorting]="true" [enableFilter]="true" [gridOptions]="gridOptions1"
+            [rowData]="checkerTicket" [columnDefs]="columnDefs" (rowClicked)='onRowClicked($event)' [rowSelection]="rowSelection"
+            [enableColResize]="true"
+            [rowGroupPanelShow]="rowGroupPanelShow"
+            [pivotPanelShow]="pivotPanelShow"
+            [enableRangeSelection]="true"
+            [pagination]="true"
+            [paginationPageSize]="paginationPageSize"
+            [paginationNumberFormatter]="paginationNumberFormatter"
+            [gridOptions]="gridOptions"
+            [defaultColDef]="defaultColDef">
+          </ag-grid-angular>
+          <div class="col-md-6" style="float: left;margin-top: -24px;margin-left: -15px;">
+            <div class="col-md-2" style="padding-left: 0px;">
+                <select (change)="onPageSizeChanged()" id="page-size" class="pageSize form-control">
+                    <option value="10" selected="">10</option>
+                    <option value="25">25</option>
+                    <option value="50">50</option>
+                    <option value="100">100</option>
+                </select>
+            </div>
+            <label for="code" style="margin-top: 7px;margin-left:-40px; font-weight:400;">Records Per Page</label>
+        </div>
+         <div class="closeBut">
+                        <a routerLink="/"><button class="exide-primary-button">Close</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<footer-c></footer-c>

@@ -1,0 +1,219 @@
+{
+      "rulesDirectory": [
+            "../node_modules/codelyzer",
+            "../node_modules/tslint-eslint-rules/dist/rules"
+      ],
+      "extends": [
+            "tslint-eslint-rules"
+      ],
+      "rules": {
+            "valid-jsdoc": [
+                  true,
+                  {
+                        "prefer": {
+                              "return": "returns"
+                        },
+                        "requireReturn": true,
+                        "requireParamDescription": true,
+                        "requireReturnDescription": true,
+                        "requireReturnType": false
+                  }
+            ],
+            "jsdoc-format": true,
+            "class-name": true,
+            "component-class-suffix": true,
+            "component-selector": [
+                  true,
+                  "element",
+                  "composite2.0",
+                  "kebab-case"
+            ],
+            "comment-format": [
+                  true,
+                  "check-space"
+            ],
+            "directive-class-suffix": true,
+            "directive-selector": [
+                  true,
+                  "attribute",
+                  "composite2.0",
+                  "camelCase"
+            ],
+            "triple-equals": [
+                  true,
+                  "allow-null-check"
+            ],
+            "pipe-naming": [
+                  true,
+                  "camelCase",
+                  "composite2.0"
+            ],
+            "use-pipe-transform-interface": true,
+            "variable-name": [
+                  true,
+                  "check-format",
+                  "allow-leading-underscore",
+                  "ban-keywords"
+            ],
+            "no-bitwise": false,
+            "switch-default": true,
+            "no-shadowed-variable": false,
+            "no-var-requires": true,
+            "indent": [
+                  true,
+                  "spaces",
+                  2
+            ],
+            "interface-name": [
+                  true,
+                  "always-prefix"
+            ],
+            "member-access": false,
+            "member-ordering": [
+                  true,
+                  "public-before-private",
+                  "static-before-instance",
+                  "variables-before-functions"
+            ],
+            "quotemark": [
+                  true,
+                  "double",
+                  "avoid-template",
+                  "avoid-escape"
+            ],
+            "no-debugger": true,
+            "no-unused-expression": [
+                  true,
+                  "allow-fast-null-Hchecks"
+            ],
+            "no-empty": true,
+            "no-console": [
+                  true,
+                  "log",
+                  "debug",
+                  "info",
+                  "time",
+                  "timeEnd",
+                  "trace"
+            ],
+            "eofline": true,
+            "no-duplicate-variable": [
+                  true,
+                  "check-parameters"
+            ],
+            "no-duplicate-super": true,
+            "max-file-line-count": [
+                  true,
+                  400
+            ],
+            "max-line-length": [
+                  true,
+                  120
+            ],
+            "align": [
+                  true,
+                  "parameters",
+                  "statements"
+            ],
+            "semicolon": [
+                  true,
+                  "always",
+                  "strict-bound-class-methods"
+            ],
+            "newline-before-return": true,
+            "one-line": [
+                  true,
+                  "check-open-brace",
+                  "check-whitespace",
+                  "check-else",
+                  "check-catch",
+                  "check-finally"
+            ],
+            "no-consecutive-blank-lines": [
+                  true,
+                  1
+            ],
+            "space-before-function-paren": [
+                  true,
+                  {
+                        "anonymous": "never",
+                        "named": "never",
+                        "asyncArrow": "always",
+                        "method": "never",
+                        "constructor": "never"
+                  }
+            ],
+            "import-spacing": true,
+            "no-switch-case-fall-through": true,
+            "use-life-cycle-interface": true,
+            "whitespace": [
+                  true,
+                  "check-branch",
+                  "check-decl",
+                  "check-operator",
+                  "check-separator",
+                  "check-type"
+            ],
+            "typedef-whitespace": [
+                  true,
+                  {
+                        "call-signature": "nospace",
+                        "index-signature": "nospace",
+                        "parameter": "nospace",
+                        "property-declaration": "nospace",
+                        "variable-declaration": "nospace"
+                  }
+            ],
+            "only-arrow-functions": [
+                  true,
+                  "allow-declarations",
+                  "allow-named-functions"
+            ],
+            "completed-docs": false,
+            "no-any": false,
+            "no-magic-numbers": false,
+            "no-non-null-assertion": false,
+            "no-null-keyword": false,
+            "no-require-imports": false,
+            "no-unbound-method": false,
+            "no-unnecessary-qualifier": false,
+            "no-use-before-declare": false,
+            "no-void-expression": false,
+            "prefer-function-over-method": false,
+            "strict-type-predicates": false,
+            "typedef": false,
+            "ban": [
+                  true,
+                  [
+                        "describe",
+                        "only"
+                  ],
+                  [
+                        "it",
+                        "only"
+                  ]
+            ],
+            "max-classes-per-file": [
+                  true,
+                  2,
+                  "exclude-class-expressions"
+            ],
+            "curly": [
+                  true,
+                  "ignore-same-line"
+            ],
+            "label-position": true,
+            "no-arg": true,
+            "no-conditional-assignment": true,
+            "no-eval": true,
+            "no-unused-variable": [
+                  true,
+                  {
+                        "ignore-pattern": "^_"
+                  }
+            ],
+            "no-var-keyword": true,
+            "radix": true,
+            "use-isnan": true
+      }
+}

@@ -1,0 +1,96 @@
+<div class="container" style="margin-top:4%;">
+    <div class="col-md-12">
+        <h3>Add New Contest</h3><br>
+        <div class="deviation-box">
+            <form (ngSubmit)="form()" class="form-horizontal" role="form">
+                <div class="form-group row">
+                    <label for="contestName" class="col-md-3">Contest Name</label>
+                    <div class="col-md-9">
+                        <input type="text" name="contestName" class="form-control " [(ngModel)]="contestName" required/>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="startDate" class="col-md-3">Start Date</label>
+                    <div class="col-md-9">
+                        <input type="date" name="startDate" class="form-control" [(ngModel)]="startDate" required/>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="endDate" class="col-md-3">End Date</label>
+                    <div class="col-md-9">
+                        <input type="date" name="endDate" class="form-control" [(ngModel)]="endDate" required/>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="channel" class="col-md-3">Channel</label>
+                    <div class="col-md-9">
+                        <select [(ngModel)]="selectedChannel" class="form-control" [ngModelOptions]="{standalone: true}" required>
+                            <option value="undefined"  disabled selected>Select</option>
+                            <option *ngFor="let channelType of channelTypes" [ngValue]="channelType">
+                                {{channelType.chanelName}}
+                            </option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="agClass" class="col-md-3">AG class</label>
+                    <div class="col-md-9">
+                        <select [(ngModel)]="selectedAG" class="form-control" [ngModelOptions]="{standalone: true}" required>
+                            <option  disabled selected>Select</option>
+                            <option *ngFor="let agentType of agentTypes" [ngValue]="agentType">
+                                {{agentType}}
+                            </option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="category" class="col-md-3">Category</label>
+                    <div class="col-md-9">
+                        <select [(ngModel)]="selectedCategory" class="form-control" [ngModelOptions]="{standalone: true}" required>
+                            <option value="undefined"  disabled selected>Select</option>
+                            <option value="Regular"  >Regular</option>
+                            <option value="Incentive">Incentive</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3"></div>
+
+                    <div class="col-md-9">
+                        <input type="checkbox" name="cash" class="contest-details" [(ngModel)]="cash" style="margin-left: 0px;" />
+                        <label for="Cash">Cash</label>
+
+                        <input type="checkbox" name="point" class="contest-details" [(ngModel)]="point" disabled/>
+                        <label for="point">Points</label>
+
+                        <input type="checkbox" name="trip" class="contest-details" [(ngModel)]="trip" />
+                        <label for="trip">Trip</label>
+
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="Comments" class="col-md-3">Comments</label>
+                    <div class="col-md-9">
+                        <input type="text" name="remarks" class="form-control" [(ngModel)]="remarks" />
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="Email" class="col-md-3">Email attachment</label>
+                    <div class="col-md-9">
+                        <input type="file" name="confAttchment" class="form-control" [(ngModel)]="confAttchment" />
+                    </div>
+                </div>
+
+                <div class="form-group row" style="margin-bottom: 0px;">
+                    <div class="col-md-12">
+                        <div class="pull-right">
+                            <button type="submit" class="btn btn-success" (ngSubmit)="Update(user)">Update</button>
+                            <a routerLink="/contestmaster"><button type="submit" class="btn btn-default">Cancel</button></a>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<footer-c></footer-c>

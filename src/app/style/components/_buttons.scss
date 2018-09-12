@@ -1,0 +1,85 @@
+//button configurations
+$button-background:$primary-color;
+$button-height:37px;
+///button width is defined here
+$button-width: 90px;
+$button-border: 1px solid #fcfcfc;  
+$button-border-radius: 0; 
+$button-color: white;
+$button-outline: 1px solid $primary-color;
+$button-font-size: 14px;
+$button-font-family:$fdx-font-bold;
+$button-padding:7px 17px;
+$button-text-tranform:capitalize;
+
+//settings configuration
+$settings-width:55px;
+$settings-height:30px;
+$settings-color:$label-color;
+$settings-margin:10px 0;
+$settings-border-radius:2px;
+$settings-border:none;
+
+//custom button
+@mixin btn(
+    $button-background:$button-background,
+    $button-border:$button-border,
+    $button-color:$button-color,
+    $button-outline:$button-outline,
+    $button-font-family:$button-font-family,
+    $button-font-size:$button-font-size,
+    $button-height:$button-height,
+    $button-width:$button-width,
+    $button-padding:$button-padding,
+    $button-border-radius:$button-border-radius,
+    $button-text-tranform:$button-text-tranform
+) 
+{
+    background-color: $button-background;
+    border: $button-border;
+    color: $button-color;
+    font-family: $button-font-family;
+    font-size: $button-font-size;
+    height: $button-height;
+    min-width: $button-width;
+    padding:$button-padding;
+    border-radius: $button-border-radius;
+    text-transform: $button-text-tranform;
+    &:focus{
+        outline: $button-outline;
+    }
+}
+
+@mixin settings-button(
+      $settings-width:$settings-width,
+      $settings-height:$settings-height,
+      $settings-color:$settings-color,
+      $settings-margin:$settings-margin,
+      $settings-border:$settings-border,
+      $settings-border-radius:$settings-border-radius
+) {
+     width:$settings-width;
+     height:$settings-height;
+     border:$settings-border;
+     color:$settings-color;
+     outline: 0;
+     cursor: $hand-cursor;
+     border-radius: $settings-border-radius;
+     margin:$settings-margin;
+
+}
+.gridSetBtn{
+    @include settings-button();
+}
+.btn-md
+{
+    @include btn();
+}
+.createBtn[disabled]
+{
+   @include btn($button-background:$disabled-button-color,$button-border:$disabled-button-color,$button-text-tranform:uppercase);
+}
+.errorBtn{
+    @include btn($button-height:28px,$button-width:75px,$button-padding:0px 17px,$button-border-radius:3px,$button-border:1px solid #ebebeb);
+    cursor:$hand-cursor;
+}

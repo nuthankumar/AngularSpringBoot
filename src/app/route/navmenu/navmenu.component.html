@@ -1,0 +1,47 @@
+<header class="app-header app-nav">
+    <div class="container-fluid">
+        <div class="col-md-6">
+            <div class="exidelife-logo">
+       <!--<img src="./assets/images/exidelife-logo.jpg" alt="exide-life-logo" class="header-logo-image">-->
+            </div>
+        </div>
+        
+           
+        <div class="col-md-6" style="margin-top:25px">
+            <span style="float: right;font-weight: 700;margin-top: -24px;">User : {{name}}</span>
+          <a href="../../../../../SFCRM/login.html"><button class="exide-primary-button" style="float:right;background:#3791e2" (click)="logout()">Logout</button></a>
+        </div>
+         <div>
+            <span ><label>Last updated agent: </label>{{agentUpdate}}</span>
+<span ><label>Last updated contest: </label>{{contestUpdate}}</span></div>
+    </div>
+</header>
+
+<ul class="top-level-menu">     
+    <li *ngFor="let item of navItems">
+        <a href="#" >
+          <span>{{item.label}}</span>     
+        </a>
+        <ul class="second-level-menu">
+            <li *ngFor="let itemchild of item.children">
+               <a routerLink="{{itemchild.link}}">{{itemchild.label}}</a>
+            </li>
+        </ul>
+    </li> 
+	 <li>
+        <a href="#">Report</a>
+        <ul class="second-level-menu">
+           <li><a href="http://nibc2274/ReportServer/Pages/ReportViewer.aspx?%2fSFCRM%2fReports%2fAdvance_Report&rs:Command=Render " target="_blank">Advance Report</a></li>
+		   <li><a href="http://nibc2274/ReportServer/Pages/ReportViewer.aspx?%2fSFCRM%2fReports%2fAdvance_Transaction_Report&rs:Command=Render" target="_blank">Advance Transaction Report</a></li>
+		   <li><a href="http://nibc2274/ReportServer/Pages/ReportViewer.aspx?%2fSFCRM%2fReports%2fContest_Qualifiers_Report&rs:Command=Render" target="_blank">Contest Qualifier Report</a></li>
+		   <li><a href="http://nibc2274/ReportServer/Pages/ReportViewer.aspx?%2fSFCRM%2fReports%2fDeviation_Report&rs:Command=Render" target="_blank">Deviation Report</a></li>
+		   <li><a href="http://nibc2274/ReportServer/Pages/ReportViewer.aspx?%2fSFCRM%2fReports%2fPending_Payout_Report&rs:Command=Render" target="_blank">Pending Payout Report</a></li>
+		   <li><a href="http://nibc2274/ReportServer/Pages/ReportViewer.aspx?%2fSFCRM%2fReports%2fPRF_Wise_Report&rs:Command=Render " target="_blank">PRF Wise Report</a></li>
+		   <li><a href="http://nibc2274/ReportServer/Pages/ReportViewer.aspx?%2fSFCRM%2fReports%2fRecovery_Report&rs:Command=Render" target="_blank">Recovery Report</a></li>
+		   <li><a href="http://nibc2274/ReportServer/Pages/ReportViewer.aspx?%2fSFCRM%2fReports%2fTransfer_Wise_Payout_Report&rs:Command=Render" target="_blank">Transfer Wise Report</a></li>
+	    </ul>
+    </li>
+
+</ul>
+
+

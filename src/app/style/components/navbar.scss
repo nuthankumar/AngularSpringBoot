@@ -1,0 +1,14 @@
+nav {
+    ul {
+      list-style: none;
+      line-height:$navBar-line-height;
+    }
+  
+    li { display: inline-block; }
+  
+    a {
+      display: block;
+      padding: $navBar-bg-color;      
+      text-decoration: none;
+    }
+  }
